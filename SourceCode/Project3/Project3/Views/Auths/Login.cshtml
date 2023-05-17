@@ -1,0 +1,59 @@
+﻿@using Project3.ViewModels
+@model LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                     class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <form asp-controller="Auths" asp-action="Login" method="post">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input asp-for="UserName" type="text" id="form1Example13" class="form-control form-control-lg" />
+                        <label asp-for="UserName" class="form-label" for="form1Example13">UserName</label>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input asp-for="Password" type="password" id="form1Example23" class="form-control form-control-lg" />
+                        <label asp-for="Password" class="form-label" for="form1Example23">Password</label>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mb-4">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input asp-for="RememberMe" class="form-check-input" type="checkbox" id="form1Example3"/>
+                            <label asp-for="RememberMe" class="form-check-label"> Remember me </label>
+                            <span asp-validation-for="RememberMe" class="text-danger"></span>
+                        </div>
+                        <a href="#!">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                    </div>
+
+                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
+                       role="button">
+                        <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+                    </a>
+                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
+                       role="button">
+                        <i class="fab fa-twitter me-2"></i>Continue with Twitter
+                    </a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

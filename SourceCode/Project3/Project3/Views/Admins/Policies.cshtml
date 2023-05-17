@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Policy>
+@{
+    ViewBag.Title = "Admin";
+    Layout = "_AdminLayout";
+    ViewBag.CurrentPage = "policies";
+}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Policies</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Status</th>
+                            <th>Name</th>
+                            <th>Policy Holder</th>
+                            <th>Policy Holder Id</th>
+                            <th>Insurance Plan</th>
+                            <th>Term Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Update Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var policy in Model)
+                        {
+                            <tr>
+                                <td>@policy.Id</td>
+                                @if (policy.Status)
+                                {
+                                    <td class="text-success">Processed</td>
+                                }
+                                else
+                                {
+                                    <td class="text-warning">Processing</td>
+                                }
+                                <td>@policy.Name</td>
+                                <td>@policy.User.UserName</td>
+                                <td>@policy.User.Id</td>
+                                <td>@policy.InsurancePlan.Name</td>
+                                <td>@policy.InsurancePlan.TermType</td>
+                                <td>@policy.StartDate</td>
+                                <td>@policy.EndDate</td>
+                                <td>@policy.UpdatedDate</td>
+                                <td>
+                                    <a asp-controller="Policies" asp-action="Edit" asp-route-id="@policy.Id" class="btn btn-warning btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </span>
+                                        <span class="text">Edit</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

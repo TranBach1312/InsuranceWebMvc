@@ -1,0 +1,233 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Project3
+build_property.RootNamespace = Project3
+build_property.ProjectDir = C:\Users\bacht\Downloads\Document (1)\SourceCode\Project3\Project3\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\bacht\Downloads\Document (1)\SourceCode\Project3\Project3
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Admins/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Admins/InsurancePlans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXEluc3VyYW5jZVBsYW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Admins/Policies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFBvbGljaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Admins/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5zXFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Auths/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aHNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Auths/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aHNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Auths/UpdateProfileInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aHNcVXBkYXRlUHJvZmlsZUluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Home/Features.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGZWF0dXJlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Home/Loan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Home/NotFound404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZDQwNC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceInformations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlSW5mb3JtYXRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceInformations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlSW5mb3JtYXRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceInformations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlSW5mb3JtYXRpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceInformations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlSW5mb3JtYXRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceInformations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlSW5mb3JtYXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsurancePlans/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlUGxhbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsurancePlans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlUGxhbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsurancePlans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlUGxhbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsurancePlans/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlUGxhbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsurancePlans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlUGxhbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlVHlwZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlVHlwZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlVHlwZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlVHlwZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/InsuranceTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlVHlwZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Loans/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Loans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Loans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Loans/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Loans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Policies/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Policies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Policies/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Policies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Policies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Shared/ContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbnRhY3RGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Users/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Users/Policies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUG9saWNpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bacht/Downloads/Document (1)/SourceCode/Project3/Project3/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zacw978oi4

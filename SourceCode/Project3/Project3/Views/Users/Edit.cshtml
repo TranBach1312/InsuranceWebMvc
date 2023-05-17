@@ -1,0 +1,103 @@
+﻿@model Project3.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section class="h-100 h-custom gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                        <form asp-controller="Users" asp-action="Edit">
+                            <div class="row g-0">
+                                <div class="col-lg-6">
+                                    <div class="p-5">
+                                        <h3 class="fw-normal mb-5" style="color: #4835d4;">Policy Holder Information</h3>
+
+                                        <div class="row">
+                                            
+                                        <div class="mb-4 pb-2">
+
+
+                                            <div class="form-outline">
+                                                <input readonly asp-for="UserName" type="text" id="form3Examplev2" class="form-control form-control-lg" />
+                                                <label asp-for="UserName" class="form-label">Username</label>
+                                            </div>
+
+                                        </div>
+                                            <div class="col-md-6 mb-4 pb-2">
+
+                                                <div class="form-outline">
+                                                    <input asp-for="Fullname" type="text" id="form3Examplev2" class="form-control form-control-lg" />
+                                                    <label asp-for="Fullname" class="form-label">Full Name</label>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6 mb-4 pb-2">
+                                                <select class="form-select" asp-items="@Html.GetEnumSelectList<Gender>()" asp-for="Gender">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-4 pb-2">
+
+
+                                            <div class="form-outline">
+                                                <input asp-for="Email" type="text" id="form3Examplev2" class="form-control form-control-lg" />
+                                                <label asp-for="Email" class="form-label">Email</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-6 mb-4 pb-2">
+
+                                                <div class="form-outline">
+                                                    <input asp-for="Address" type="text" id="form3Examplev2" class="form-control form-control-lg" />
+                                                    <label asp-for="Address" class="form-label">Address</label>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6 mb-4 pb-2">
+
+                                                <div class="form-outline">
+                                                    <input type="text" id="form3Examplev3" class="form-control form-control-lg" asp-for="PhoneNumber" />
+                                                    <label class="form-label" asp-for="PhoneNumber">Phone Number</label>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row d-flex justify-content-center align-items-center">
+                                    <div class="col-md-6 mb-4 pb-2">
+                                        <div class="form-outline">
+                                            <input hidden asp-for="NormalizedUserName" class="form-control" />
+                                            <input hidden asp-for="NormalizedEmail" class="form-control" />
+                                            <input hidden class="form-check-input" asp-for="EmailConfirmed" /> 
+                                            <input hidden asp-for="PasswordHash" class="form-control" />
+                                            <input hidden asp-for="SecurityStamp" class="form-control" />
+                                            <input hidden asp-for="ConcurrencyStamp" class="form-control" />
+                                            <input hidden class="form-check-input" asp-for="PhoneNumberConfirmed" /> 
+                                            <input hidden class="form-check-input" asp-for="TwoFactorEnabled" /> 
+                                            <input hidden class="form-check-input" asp-for="LockoutEnabled" /> 
+                                            <input hidden asp-for="AccessFailedCount" class="form-control" />
+                                            <input hidden asp-for="LockoutEnd" class="form-control" />
+                                            <input type="submit" id="form3Examplev2" class="text-black-50 form-control form-control-lg btn btn-primary" value="Submit" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,81 @@
+﻿@model Project3.Models.InsurancePlan
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section class="h-100 h-custom gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                        <form asp-controller="InsurancePlans" asp-action="Edit">
+                            <div class="row g-0">
+                                <div class="col-lg-6">
+                                    <div class="p-5">
+                                        <h3 class="fw-normal mb-5" style="color: #4835d4;">Policy Holder Information</h3>
+
+                                        <div class="mb-4 pb-2">
+                                            <select class="form-select" asp-items="@ViewBag.InsuranceTypeId" asp-for="InsuranceTypeId">
+                                            </select>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4 pb-2">
+
+                                                <div class="form-outline">
+                                                    <input asp-for="Name" type="text" id="form3Examplev2" class="form-control form-control-lg" />
+                                                    <label asp-for="Name" class="form-label">Name</label>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6 mb-4 pb-2">
+
+                                                <div class="form-outline">
+                                                    <input type="text" id="form3Examplev3" class="form-control form-control-lg" asp-for="Premium" />
+                                                    <label class="form-label" asp-for="Premium">Premium</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="mb-4 pb-2">
+
+
+                                            <div class="form-outline">
+                                                <input asp-for="Description" type="text" id="form3Examplev2" class="form-control form-control-lg" />
+                                                <label asp-for="Description" class="form-label">Description</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-6 mb-4 pb-2">
+
+                                                <div class="form-outline">
+                                                    <select class="form-select" asp-for="TermType" asp-items="@Html.GetEnumSelectList<TermType>()">
+
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center align-items-center">
+                                    <div class="col-md-6 mb-4 pb-2">
+                                        <div class="form-outline">
+                                            <input type="submit" id="form3Examplev2" class="text-black-50 form-control form-control-lg btn btn-primary" value="Submit" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

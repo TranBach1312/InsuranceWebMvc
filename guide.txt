@@ -1,0 +1,9 @@
+
+"After registering and logging in, users can choose from available insurance packages and submit consultation 
+requests to the admin. The admin will contact and process the user's requests, and then users can proceed to 
+make payments for their insurance."
+
+*Admin account:
+     username: admin
+     password: admin@123
+

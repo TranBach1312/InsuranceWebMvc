@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<InsurancePlan>
+@{
+    ViewBag.Title = "Admin";
+    Layout = "_AdminLayout";
+    ViewBag.CurrentPage = "product";
+}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Insurance Plans</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <a asp-controller="InsurancePlans" asp-action="Create" class="btn btn-primary btn-icon-split ">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-plus"></i>
+                                        </span>
+                                        <span class="text">New Product</span>
+                                    </a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Inurance Type</th>
+                            <th>Term Type</th>
+                            <th>Premium</th>
+                            <th>Create Date</th>
+                            <th>Update Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var insurancePlan in Model)
+                        {
+                            <tr>
+                                <td>@insurancePlan.Id</td>
+                                <td>@insurancePlan.Name</td>
+                                <td>@insurancePlan.InsuranceType.Name</td>
+                                <td>@insurancePlan.TermType</td>
+                                <td>@insurancePlan.Premium</td>
+                                <td>@insurancePlan.CreatedDate</td>
+                                <td>@insurancePlan.UpdatedDate</td>
+                                <td>
+                                    <a asp-controller="InsurancePlans" asp-action="Edit" asp-route-id="@insurancePlan.Id" class="btn btn-warning btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </span>
+                                        <span class="text">Edit</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

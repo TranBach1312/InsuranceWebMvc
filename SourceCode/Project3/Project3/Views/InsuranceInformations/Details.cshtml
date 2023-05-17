@@ -1,0 +1,48 @@
+﻿@model Project3.Models.InsuranceInformation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>InsuranceInformation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyHolderCId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PolicyHolderCId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PolicyHolderAddress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PolicyHolderAddress)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LicensePlateNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LicensePlateNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VehicleModel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VehicleModel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VehicleYear)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VehicleYear)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

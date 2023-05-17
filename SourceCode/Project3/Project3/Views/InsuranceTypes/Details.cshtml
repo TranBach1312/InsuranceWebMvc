@@ -1,0 +1,132 @@
+﻿@model Project3.ViewModels.OrderViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    ViewBag.CurrentPage = "ourservices";
+}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn"
+     data-wow-delay="0.1s">
+    <div class="container py-5">
+        <h1 class="display-4 animated slideInDown mb-4">@Model.InsuranceType.Name</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li class="breadcrumb-item"><a asp-controller="InsuranceTypes" asp-action="Index">Our Services</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    @Model.InsuranceType.Name
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Appointment Start -->
+<div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                <h1 class="display-6 mb-5" style="height: 20%;">
+                    Contact us for consultation
+                </h1>
+                <div class="bg-light rounded p-3">
+                    @foreach (var insurancePlan in Model.InsuranceType.InsurancePlans)
+                    {
+                        <table class="table rounded p-3">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Plan's Name</th>
+                                    <th scope="col">Payment Term</th>
+                                    <th scope="col">Premium</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">@insurancePlan.Id</th>
+                                    <td>@insurancePlan.Name</td>
+                                    <td>@insurancePlan.TermType</td>
+                                    <td>@insurancePlan.Premium</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="display-6 mb-5" style="height: 20%;">
+                    Or leave your contact information
+                </h1>
+                <div class="bg-light rounded p-5">
+                    <form asp-controller="InsuranceTypes" asp-action="CreateOrder" asp-route-user="@User" method="post">
+                        <input hidden value="@Model.InsuranceType.Id" asp-for="InsuranceTypeId"/>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="gname"
+                                           placeholder="Gurdian Name"
+                                           asp-for="FullName" />
+                                    <label asp-for="FullName">Your Name</label>
+                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="email"
+                                           class="form-control"
+                                           id="gmail"
+                                           placeholder="Gurdian Email" 
+                                           asp-for="Email" />
+                                    <label asp-for="Email">Email</label>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="cname"
+                                           placeholder="Phone Number"
+                                           asp-for="PhoneNumber" />
+                                    <label asp-for="PhoneNumber">Phone Number</label>
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="cage"
+                                           placeholder="Address"
+                                           asp-for="Address" />
+                                    <label asp-for="Address">Address</label>
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="col-12 mb-4 ">
+                                    <select asp-for="InsurancePlanId" class="form-select" style="padding: 10px 10px">
+                                        @foreach (var plan in Model.InsuranceType.InsurancePlans)
+                                        {
+                                            <option style="vertical-align: central;" value="@plan.Id">@plan.Name</option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="InsurancePlanId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">
+                                    Get Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Appointment End -->

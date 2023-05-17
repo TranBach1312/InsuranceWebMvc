@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Tables</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/adminStyle.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="~/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="Home" asp-action="Index">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                        <path d="M7.5 1v7h1V1h-1z" />
+                        <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                    </svg>
+                </div>
+                <div class="sidebar-brand-text mx-3">Insurance Admin</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item @(ViewBag.CurrentPage == "dashboard" ? "active" : "")">
+                <a class="nav-link" asp-controller="Admins" asp-action="Index">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item @(ViewBag.CurrentPage == "product" ? "active" : "") ">
+                <a class="nav-link" asp-controller="Admins" asp-action="InsurancePlans">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Product</span>
+                </a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item @(ViewBag.CurrentPage == "policies" ? "active" : "") ">
+                <a class="nav-link" asp-controller="Admins" asp-action="Policies">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Policies</span>
+                </a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item  @(ViewBag.CurrentPage == "users" ? "active" : "")">
+                <a class="nav-link" asp-controller="Admins" asp-action="Users">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                   aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                 aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                               placeholder="Search for..." aria-label="Search"
+                                               aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="~/images/undraw_profile_1.svg"
+                                             alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">
+                                            Hi there! I am wondering if you can help me with a
+                                            problem I've been having.
+                                        </div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="~/images/undraw_profile_2.svg"
+                                             alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            I have the photos that you ordered last month, how
+                                            would you like them sent to you?
+                                        </div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="~/images/undraw_profile_3.svg"
+                                             alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!
+                                        </div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                             alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...
+                                        </div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Megumin</span>
+                                <img class="img-profile rounded-circle"
+                                     src="data:image/jpeg;base64,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">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+        @RenderBody()
+    </div>
+    <!-- End of Main Content -->
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Your Website 2020</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/vendor/chart.js/Chart.min.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="~/js/demo/datatables-demo.js"></script>
+    <script src="~/js/demo/chart-area-demo.js"></script>
+    <script src="~/js/demo/chart-pie-demo.js"></script>
+    <script src="~/js/demo/chart-bar-demo.js"></script>
+</body>
+
+</html>
